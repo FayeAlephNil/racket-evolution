@@ -1,1 +1,41 @@
-/home/faye/Documents/org/ideas/racket-evolution.org
+#+TITLE: Racket Evolution
+
+[[file:~/Documents/Repos/racket-evolution/][Source code]]
+
+* GUI
+|-------+------------|
+| [[Frame]] | [[Statistics]] |
+|-------+------------|
+| [[REPL]]  |            |
+|-------+------------|
+
+** REPL
+
+We'd have a repl on the right, starting with some display of options that can be easily configured. The repl can be sandboxed appropriately directly in racket (see [[Sandboxing / REPL]])
+
+** Frame
+
+This would display some subsection of all the creatures, for increased performance. Simple graphics that just provide the gist of what's going on is the goal here.
+
+** Statistics
+
+Collect basic statistics to display to the user
+
+* Programming Side
+** Sandboxing / REPL
+
+We can use [[https:docs.racket-lang.org/reference/Sandboxed_Evaluation.html][racket/sandbox]] to do the sandboxed evaluation
+
+*** Rendering the REPL
+*** Exceptions
+
+We need a special error-handling way to show exceptions to the user, probably in the REPL. We define this as an [[https:docs.racket-lang.org/reference/exns.html][exception handler]]
+
+** Creature Simulation
+*** Data Layout
+
+Object (x y) --> Creature (dna belly offspring parents)
+Object (x y) --> Food (value)
+
+
+** Rendering the Frame
